@@ -11,6 +11,15 @@
   </head>
 
   <body>
+    <header class="flex-container bg-site font-white">
+      <%= image_tag("logo/logo_white.png") %>
+      <ul class="navbar">
+        <% if current_user %>
+          <li class="is-button"><%= link_to "Profile", user_path(current_user)%></li>
+          <li class="is-button"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+        <% end %>
+      <ul>
+    </header>
     <%= yield %>
   </body>
 </html>

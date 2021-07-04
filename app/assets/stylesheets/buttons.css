@@ -1,0 +1,7 @@
+.is-button {
+  padding: 10px 10px;
+}
+
+.is-button:hover {
+  background-color: rgba(0,0,0, 0.4);
+}

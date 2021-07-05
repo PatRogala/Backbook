@@ -1,0 +1,26 @@
+.form {
+  background: #52a374;
+  margin-top: 100px;
+  padding: 40px 100px;
+}
+
+.form h2, .form .field {
+  margin-bottom: 10px;
+}
+
+.form-button {
+  color: black; 
+  background: #fff;
+  border: none;
+  padding: 5px 15px;
+  margin-bottom: 10px;
+}
+
+.form-button:hover {
+  background: rgba(255, 255,255, 0.8);
+  cursor: pointer;
+}
+
+.field input[type=text], .field input[type="email"], .field input[type="password"] {
+  width: 100%;
+}

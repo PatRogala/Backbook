@@ -12,10 +12,11 @@
 
   <body>
     <header class="flex-container bg-site font-white">
-      <%= image_tag("logo/logo_white.png") %>
+      <%= link_to image_tag("logo/logo_white.png") , root_path %>
       <ul class="navbar">
         <% if current_user %>
-          <li class="is-button"><%= link_to "Profile", user_path(current_user)%></li>
+        <li class="is-button"><%= link_to "Notifications", notification_path %></li>
+          <li class="is-button"><%= link_to "Profile", profile_path %></li>
           <li class="is-button"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
         <% end %>
       <ul>

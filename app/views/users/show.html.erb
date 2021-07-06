@@ -1,7 +1,11 @@
-<div class="flex-centered">
+<div class="flex-container">
   <% if current_user.id.to_s != params[:id] && action_name != 'profile' %>
     <%= button_to "Add Friend", invite_user_path(params[:id]), class: "is-button" %>
   <% end %>
-  Friends:
-  <%= render @user.friends %>
+  <div class="friend-list">
+    <h3>Friend list:</h3>
+    <%= render @user.friends %>
+  </div>
+
+  <%= render @user.posts %>
 <div>

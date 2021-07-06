@@ -23,4 +23,8 @@ body {
   flex-direction: column;
 }
 
-
+.w-30 {
+  width: 30%;
+  height: 50px;
+  margin: 30px auto;
+}

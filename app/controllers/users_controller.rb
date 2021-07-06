@@ -2,7 +2,11 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @friends = current_user.friends
+    # New post for form
+    @post = Post.new
+
+    # All friends posts
+    @posts = Post.all
   end
 
   def show
@@ -31,12 +35,12 @@ class UsersController < ApplicationController
 
     # Add to friendlist
     current_user.friendships.create(friend_id: params[:id])
-    render :notification
+    redirect_to :notification
   end
 
   def decline
     friend_pending = current_user.friends_pendings.find_by(inviter_id: params[:id])
     friend_pending.destroy
-    render :notification
+    redirect_to :notification
   end
 end

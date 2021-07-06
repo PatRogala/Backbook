@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   end
   get "/profile", to: "users#profile", as: "profile"
   get "/notification", to: "users#notification", as: "notification"
+  resources :posts, only: [:create]
 end

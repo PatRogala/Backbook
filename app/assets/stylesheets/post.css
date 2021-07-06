@@ -1,0 +1,29 @@
+.post {
+  margin: 20px 0;
+  background: #fff;
+  width: 460px;
+  padding: 20px 15px;
+}
+.post a {
+  color: #52a374;
+}
+.post-body {
+  margin-top: 10px;
+}
+
+.post small {
+  font-size: 0.7em;
+  font-style: italic;
+}
+
+.friend-list {
+  position: absolute;
+  left: 20px;
+}
+.friend-list a {
+  color: #52a374;
+}
+
+.friend-list h3 {
+  margin: 10px 0;
+}

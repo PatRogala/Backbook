@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :users do
     member do
       post 'invite', as: 'invite'
+      post 'accept', as: 'accept'
+      delete 'decline', as: 'decline'
     end
   end
   get "/profile", to: "users#profile", as: "profile"

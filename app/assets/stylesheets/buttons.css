@@ -1,5 +1,6 @@
 .is-button {
   padding: 10px 10px;
+  border: none;
 }
 
 .is-button:hover {
@@ -10,6 +11,16 @@
   width: 60%;
   margin: auto;
   list-style: none;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.not-buttons {
+  display: flex;
+}
+.not-buttons form {
+  margin-right: 10px;
 }

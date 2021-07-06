@@ -1,1 +1,6 @@
-<li class="bg-site invites"><a href="" class="is-button"><%= "#{invite.inviter.first_name} #{invite.inviter.last_name}"  %></a> invited you to his friend list<li>
+<li class="bg-site invites"><span><a href="<%= user_path(invite.inviter.id) %>" class="is-button"><%= "#{invite.inviter.first_name} #{invite.inviter.last_name}"  %></a> invited you to his friend list</span>
+<span class="not-buttons">
+<%= button_to "Accept", accept_user_path(invite.inviter.id), class: 'is-button bg-site font-white' %>
+<%= button_to "Decline", decline_user_path(invite.inviter.id), method: 'delete', class: 'is-button bg-site font-white'  %>
+<span>
+<li>

@@ -1,7 +1,5 @@
 <div class="flex-centered">
-  Friend list:
   <% if current_user != params[:id] && action_name != 'profile' %>
     <%= button_to "Add Friend", invite_user_path(params[:id]) %>
   <% end %>
-  # TO DO sprawdzic czy to nie konto current usera jesli nie przycisk do invite stwrozyc nowe zaprsozenie etc
 <div>

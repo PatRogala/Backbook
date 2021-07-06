@@ -1,1 +1,9 @@
-<%= render partial: "invite", collection: @friends_requests %>
+<div class="w-80">
+  <ul>
+    <% if @friends_requests %>
+      <%= render partial: "invite", collection: @friends_requests %>
+    <% else %>
+      <h2>No new notifications</h2>
+    <% end %>
+  </ul>
+</div>

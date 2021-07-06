@@ -5,3 +5,11 @@
 .is-button:hover {
   background-color: rgba(0,0,0, 0.4);
 }
+
+.invites {
+  width: 60%;
+  margin: auto;
+  list-style: none;
+  margin-top: 20px;
+  padding: 20px 0;
+}

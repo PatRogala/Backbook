@@ -12,5 +12,9 @@ Rails.application.routes.draw do
   end
   get "/profile", to: "users#profile", as: "profile"
   get "/notification", to: "users#notification", as: "notification"
-  resources :posts, only: [:create]
+  resources :posts, only: [:create, :show] do
+    member do
+      get 'like', as: 'like'
+    end
+  end
 end

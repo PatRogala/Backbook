@@ -47,3 +47,11 @@
 .post-panel a {
   text-decoration: underline;
 }
+
+.post-panel .icon:hover {
+  color: #5258A3;
+}
+
+.liked {
+  color: #5A37C8 !important;
+}

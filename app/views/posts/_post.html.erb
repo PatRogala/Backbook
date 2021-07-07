@@ -1,8 +1,14 @@
-<div class="post">
-  <a href="<%= user_path(post.user.id) %>">
-  <%= "#{post.user.first_name} #{post.user.last_name}" %></a>
-  <div class="post-body">
-  <small><%= post_date(post) %></small><br>
-    <%= post.body %>
+<div class="post-container">
+  <div class="post">
+    <a href="<%= user_path(post.user.id) %>">
+    <%= "#{post.user.first_name} #{post.user.last_name}" %></a>
+    <div class="post-body">
+    <small><%= post_date(post) %></small><br>
+      <%= post.body %>
+    </div>
+  </div>
+  <div class="post-panel">
+    <i class="far fa-thumbs-up"> 0</i>
+    <a href="#">Show comments</a>
   </div>
 </div>

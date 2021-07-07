@@ -1,8 +1,12 @@
+.post-container {
+  margin: 30px 0;
+  width: 490px;
+}
 .post {
-  margin: 20px 0;
+  margin-top: 20px;
   background: #fff;
-  width: 460px;
   padding: 20px 15px;
+  box-sizing: border-box;
 }
 .post a {
   color: #52a374;
@@ -26,4 +30,20 @@
 
 .friend-list h3 {
   margin: 10px 0;
+}
+.post-panel {
+  background-color: #52a374;
+  height: 30px;
+  box-sizing: border-box;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-panel i {
+  color: #fff;
+}
+
+.post-panel a {
+  text-decoration: underline;
 }

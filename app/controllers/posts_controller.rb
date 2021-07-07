@@ -4,7 +4,7 @@ class PostsController < ApplicationController
     @post = Post.new
 
     # All friends posts
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
   end
 
   def create

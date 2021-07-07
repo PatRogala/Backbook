@@ -9,6 +9,6 @@
   </div>
   <div class="post-panel">
     <a href="<%= like_post_path(post) %>"><i class="far fa-thumbs-up icon <%= post_liked?(post) %>"> <%= post.likes.count %></i></a>
-    <a href="#">Show comments</a>
+    <a href="<%= post_path(post) %>">Show comments</a>
   </div>
 </div>

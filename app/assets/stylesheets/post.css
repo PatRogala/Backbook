@@ -38,6 +38,7 @@
   padding: 6px 10px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .post-panel i {
@@ -54,4 +55,21 @@
 
 .liked {
   color: #5A37C8 !important;
+}
+
+.comment {
+  background-color: #fff;
+  margin: 20px 0;
+  width: 490px;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+.comment p {
+  text-align: right;
+  overflow-wrap: break-word;
+}
+
+.comment a {
+  color: #52a374;
 }

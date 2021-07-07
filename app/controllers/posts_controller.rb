@@ -7,6 +7,14 @@ class PostsController < ApplicationController
     @posts = Post.all.order(created_at: :desc).includes(:likes)
   end
 
+  def show
+    @post = Post.find(params[:id])
+    p "\n\n\n\n\n#{@post}\n\n\n\n\n"
+    @comments = @post.comments.order(created_at: :desc)
+
+    @new_comment = @post.comments.build
+  end
+
   def create
     @post = current_user.posts.build(post_params)
     @post.save
@@ -25,6 +33,11 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
+  def comment
+    post = Post.find(params[:id]).comments.build(user_id: current_user.id, body: params[:comment][:body])
+    post.save
+    redirect_to post_path(params[:id])
+  end
   private
 
   def post_params

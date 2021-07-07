@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :posts, only: [:create, :show] do
     member do
       get 'like', as: 'like'
+      post 'comment', as: 'comment'
     end
   end
 end

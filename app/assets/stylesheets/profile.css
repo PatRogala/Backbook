@@ -1,0 +1,44 @@
+.profile {
+  position: absolute;
+  left: 30px;
+  top: 100px;
+  width: 260px;
+  margin: 20px;
+  border: 1px solid #52a374;
+}
+
+.profile-avatar {
+  background: #52a374;
+  height: 80px;
+}
+
+.profile-avatar img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  bottom: -50px;
+  margin-left: 0;
+  left: 100px;
+}
+
+.profile-info {
+  box-sizing: border-box;
+  padding: 20px 10px;
+}
+
+.profile-info h3 {
+  margin-top: 30px;
+}
+
+.profile-feedback {
+  margin-top: 30px;
+}
+
+.profile-btn form {
+  margin: 15px 0 10px 0;
+}
+
+.profile-btn form input {
+  font-weight: 800;
+}

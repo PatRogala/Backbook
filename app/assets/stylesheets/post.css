@@ -22,7 +22,7 @@
 
 .friend-list {
   position: absolute;
-  left: 20px;
+  right: 50px;
 }
 .friend-list a {
   color: #52a374;
@@ -43,6 +43,7 @@
 
 .post-panel i {
   color: #fff;
+  font-weight: 800;
 }
 
 .post-panel a {
@@ -51,6 +52,7 @@
 
 .post-panel .icon:hover {
   color: #5258A3;
+  font-weight: 800;
 }
 
 .liked {

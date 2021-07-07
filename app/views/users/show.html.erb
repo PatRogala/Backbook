@@ -1,12 +1,26 @@
 <div class="flex-container">
-  <% if current_user.id.to_s != params[:id] && action_name != 'profile' %>
-    <%= button_to "Add Friend", invite_user_path(params[:id]), class: "is-button" %>
-  <% end %>
+  <div class="profile">
+    <div class="profile-avatar">
+      <%= gravatar_image_tag("#{@user.email}".gsub('spam', 'mdeering'), :alt => "#{@user.first_name} #{@user.last_name}") %>
+    </div>
+    <div class="profile-info">
+      <h3><%= "#{@user.first_name} #{@user.last_name} " %><%= user_sex_icon(@user).html_safe %></h3>
+      <small>With us since: <%= user_creation_time(@user) %></small>
+      <div class="profile-btn">
+        <% if current_user.id.to_s != params[:id] && action_name != 'profile' %>
+          <%= button_to "Add Friend", invite_user_path(params[:id]), class: "is-button bg-site font-white" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
   <div class="friend-list">
     <h3>Friend list:</h3>
     <%= render @user.friends %>
   </div>
   <div class="flex-cointainer w-30">
+    <% if @user.posts.empty? %>
+      <h2 class="profile-feedback">No recent feedback :c</h2>
+    <% end %>
     <%= render @user.posts %>
   </div>
 <div>

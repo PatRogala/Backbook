@@ -1,8 +1,14 @@
-<div class="flex-cointainer bg-site w-30">
+<div class="flex-cointainer w-30">
   <%= form_with model: @post do |form| %>
     <%= form.text_area :body, size: '60x6', placeholder: "What do you think..."%>
     <%= form.submit "Create post", class: "is-button bg-site font-white" %>
   <% end %>
 
   <%= render @posts %>
+</div>
+
+
+<div class="user-list">
+  <h2>Our users:</h2>
+  <%= render User.all %>
 </div>

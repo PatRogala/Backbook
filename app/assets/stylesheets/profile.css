@@ -42,3 +42,15 @@
 .profile-btn form input {
   font-weight: 800;
 }
+
+
+.user-list a {
+  color: #52a374;
+}
+
+.user-list .user {
+  margin: 10px 0;
+}
+.user-list {
+  margin-left: 30px;
+}

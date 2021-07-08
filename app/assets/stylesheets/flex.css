@@ -28,3 +28,9 @@ body {
   height: 50px;
   margin: 30px auto;
 }
+
+.w-100 {
+  width: 100vw;
+  color: black;
+  margin-top: 50px;
+}

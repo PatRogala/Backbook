@@ -1,1 +1,9 @@
-<a href="<%= user_path(user) %>"><%= "#{user.first_name} #{user.last_name}" %><a/>
+<% if action_name == "show" %>
+  <a href="<%= user_path(user) %>"><%= "#{user.first_name} #{user.last_name}" %><a/>
+<% end %>
+
+<% if action_name == "index" %>
+  <div class="user">
+    <a href="<%= user_path(user) %>"><%= "#{user.first_name} #{user.last_name}" %><a/>
+  </div>
+<% end %>

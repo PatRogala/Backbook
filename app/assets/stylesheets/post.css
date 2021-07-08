@@ -1,5 +1,5 @@
 .post-container {
-  margin: 30px 0;
+  margin: 10px 0;
   width: 490px;
 }
 .post {
@@ -23,6 +23,7 @@
 .friend-list {
   position: absolute;
   right: 50px;
+  top: 100px;
 }
 .friend-list a {
   color: #52a374;
@@ -38,7 +39,6 @@
   padding: 6px 10px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
 }
 
 .post-panel i {

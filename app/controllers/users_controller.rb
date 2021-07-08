@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     @is_invited = FriendsPending.where(inviter_id: current_user.id, invitee_id: params[:id]).any?
     puts @is_invited
     FriendsPending.create(inviter_id: current_user.id, invitee_id: params[:id]) unless @is_invited
+    redirect_to user_path(params[:id])
   end
 
   def notification

@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
   def index
     # New post for form
     @post = Post.new
@@ -9,7 +10,6 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    p "\n\n\n\n\n#{@post}\n\n\n\n\n"
     @comments = @post.comments.order(created_at: :desc)
 
     @new_comment = @post.comments.build

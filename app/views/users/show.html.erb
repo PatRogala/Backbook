@@ -8,7 +8,7 @@
       <small>With us since: <%= user_creation_time(@user) %></small>
       <div class="profile-btn">
         <% if current_user.id.to_s != params[:id] && action_name != 'profile' %>
-          <%= button_to "Add Friend", invite_user_path(params[:id]), class: "is-button bg-site font-white" %>
+          <%= button_to invitation_status(current_user.id, params[:id]), invite_user_path(params[:id]), class: "is-button bg-site font-white" %>
         <% end %>
       </div>
     </div>
@@ -17,10 +17,11 @@
     <h3>Friend list:</h3>
     <%= render @user.friends %>
   </div>
-  <div class="flex-cointainer w-30">
+  <div class="flex-centered w-100">
     <% if @user.posts.empty? %>
       <h2 class="profile-feedback">No recent feedback :c</h2>
+    <% else %>
+      <%= render @user.posts %>
     <% end %>
-    <%= render @user.posts %>
   </div>
 <div>

@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.where(id: params[:id]).includes(:posts).first
+    @friends = Friendship.where(user_id: current_user.id, friend_id: @user.id).any?
   end
 
   def profile
@@ -12,8 +13,9 @@ class UsersController < ApplicationController
 
   def invite
     @is_invited = FriendsPending.where(inviter_id: current_user.id, invitee_id: params[:id]).any?
-    puts @is_invited
-    FriendsPending.create(inviter_id: current_user.id, invitee_id: params[:id]) unless @is_invited
+    @is_friend = Friendship.where(user_id: current_user.id, friend_id: params[:id]).any?
+    @invintable = @is_invited || @is_friend
+    FriendsPending.create(inviter_id: current_user.id, invitee_id: params[:id]) unless @invintable
     redirect_to user_path(params[:id])
   end
 
@@ -28,6 +30,7 @@ class UsersController < ApplicationController
 
     # Add to friendlist
     current_user.friendships.create(friend_id: params[:id])
+    User.find(params[:id]).friendships.create(friend_id: current_user.id)
     redirect_to :notification
   end
 

@@ -1,5 +1,5 @@
 <div class="comment">
-  <small><a href="<%= user_path(@post.user.id) %>">
-      <%= "#{@post.user.first_name} #{@post.user.last_name}" %></a></small>
+  <small><a href="<%= user_path(comment.user.id) %>">
+      <%= "#{comment.user.first_name} #{comment.user.last_name}" %></a></small>
   <p><%= comment.body %></p>
 </div>

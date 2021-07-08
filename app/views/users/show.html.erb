@@ -7,7 +7,7 @@
       <h3><%= "#{@user.first_name} #{@user.last_name} " %><%= user_sex_icon(@user).html_safe %></h3>
       <small>With us since: <%= user_creation_time(@user) %></small>
       <div class="profile-btn">
-        <% if current_user.id.to_s != params[:id] && action_name != 'profile' %>
+        <% if current_user.id.to_s != params[:id] && action_name != 'profile' && @friends == false %>
           <%= button_to invitation_status(current_user.id, params[:id]), invite_user_path(params[:id]), class: "is-button bg-site font-white" %>
         <% end %>
       </div>

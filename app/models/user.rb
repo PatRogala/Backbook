@@ -26,7 +26,6 @@ class User < ApplicationRecord
   end
 
   def welcome_email
-    puts "SIEMANKOOOO AOWDOW OADO AOW"
     UserMailer.welcome_email(self).deliver
   end
 end

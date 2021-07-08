@@ -11,7 +11,7 @@ class User < ApplicationRecord
   validates :first_name, :last_name, :sex, presence: true
   validates :sex, inclusion: { in: %w(F M) }
 
-  after_create :welcome_email
+  #after_create :welcome_email <-- only localhost need configuration for heroku
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|

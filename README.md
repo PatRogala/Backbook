@@ -3,6 +3,8 @@ The Backbook is my newest project in which I summarized my Rails skills. The aut
 
 [Live demo](https://backboook.herokuapp.com/posts/2)
 
+Test account: test@test.com : 123456
+
 ## Install
 
 ### Clone the repository
